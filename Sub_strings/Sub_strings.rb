@@ -2,11 +2,23 @@
 # as the second argument. It should return a hash listing each substring (case insensitive) that was found in the original string and
 # how many times it was found
 
-# FIRST TODO: figure out how to find count for each element in the array
+# have to use #match 
 
-Dictionary = ["below","down","go","going","horn","how","howdy","it","i","low","own","part","partner","sit"]
+dictionary = ["below","down","go","going","horn","how","howdy","it","i","low","own","part","partner","sit"]
 
 
 def substrings(word, array)
-    word_to_chars = word.chars
+    word_split = word.split(" ")
+    array.each do |dict_word|
+        if dict_word.match(word)
+            puts "The dictionary word is: #{dict_word} and it matches"
+        else 
+            puts "the dict word does not match"
+        end
+    end        
 end
+
+
+p substrings("below", dictionary)
+
+
