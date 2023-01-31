@@ -9,15 +9,15 @@ dictionary = ["below","down","go","going","horn","how","howdy","it","i","low","o
 
 def substrings(word, dictionary)
     word_array = []
+    # iterate over every word in dictionary and checking if it's it #includes the argument word. If it is, push it into word_array
     dictionary.each do |dict_word|
         if word.downcase.include?(dict_word.downcase)
             word_array.push(dict_word)
         end
     end 
-    p word_array       
+    
+
 end
 
-
-# p substrings("below", dictionary)
 
 substrings("Howdy partner, sit down! How's it going?", dictionary)
