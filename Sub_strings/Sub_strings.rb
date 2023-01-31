@@ -7,18 +7,17 @@
 dictionary = ["below","down","go","going","horn","how","howdy","it","i","low","own","part","partner","sit"]
 
 
-def substrings(word, array)
-    word_split = word.split(" ")
-    array.each do |dict_word|
-        if dict_word.match(word)
-            puts "The dictionary word is: #{dict_word} and it matches"
-        else 
-            puts "the dict word does not match"
+def substrings(word, dictionary)
+    word_array = []
+    dictionary.each do |dict_word|
+        if word.downcase.include?(dict_word.downcase)
+            word_array.push(dict_word)
         end
-    end        
+    end 
+    p word_array       
 end
 
 
-p substrings("below", dictionary)
+# p substrings("below", dictionary)
 
-
+substrings("Howdy partner, sit down! How's it going?", dictionary)
