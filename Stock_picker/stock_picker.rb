@@ -6,5 +6,9 @@
 list = [17,3,6,9,15,8,6,1,10]
 
 def stock_picker(stock_prices)
+    best_buy = nil
+    best_sell = nil
+    maximum_profit = 0
+
 
 end
