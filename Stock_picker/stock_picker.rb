@@ -14,7 +14,7 @@ def stock_picker(stock_prices)
             if (sell - buy ) > maximum_profit
                 maximum_profit = sell - buy
                 best_buy = i
-                
+                best_sell = j + (i + 1)
             end 
         end
     end
