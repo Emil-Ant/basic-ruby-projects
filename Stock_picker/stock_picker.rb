@@ -6,9 +6,19 @@
 list = [17,3,6,9,15,8,6,1,10]
 
 def stock_picker(stock_prices)
-    best_buy = nil
-    best_sell = nil
+    best_buy = 0
+    best_sell = 0
     maximum_profit = 0
-
-
+    stock_prices[0..-2].each_with_index do |buy, i|
+        stock_prices[(i + 1) .. -1].each_with_index do |sell, j|
+            if (sell - buy ) > maximum_profit
+                maximum_profit = sell - buy
+                best_buy = i
+                
+            end 
+        end
+    end
+    [best_buy, best_sell]
 end
+
+p stock_picker(list)

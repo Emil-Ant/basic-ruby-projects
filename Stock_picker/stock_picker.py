@@ -14,7 +14,7 @@ def stock_picker(stock_prices):
             # profit = stock_prices[value_index] - stock_prices[i]
             # print(f"The profit is: {profit}")
 
+
 print(stock_picker(list))
 
-# Current progress: trying to figure out how to go through list and basically do value (current iterable) - stock_prices at all the indexes that come after the index of value till the end of the list
     
